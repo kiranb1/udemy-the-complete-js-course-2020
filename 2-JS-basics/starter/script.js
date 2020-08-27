@@ -1,4 +1,22 @@
-var firstName = 'John',
-var age = 16;
+// This is a function expression
 
-age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+//Function declaration - they don't always produce an immediate value. They are called statements
+function whatDoYouDo(job, firstName){}
+
+// Function expression - expressions always produce a value 
+var whatDoYouDo = function(job, firstName){
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teached kids how to code';
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
